@@ -1,9 +1,13 @@
 class solution:
-    def twoSum(self, nums, target):
-        dict = {}
-        for i, n in enumerate(nums):
-            cp = target - n
-            if cp in target:
-                return [dict[cp], i]
-            else:
-                dict[n] = i
+    def twosum(self, nums, target):
+        hash = dict()
+        for i, num in enumerate(nums):
+            if target - num in hash:
+                return [hash[target - num], i]
+            hash[nums[i]] = i
+        return []
+
+solution = solution()
+nums = [0,1,2,3]
+target = 5
+print(solution.twosum(nums,target))
