@@ -11,4 +11,3 @@ solution = solution()
 nums = [0,1,2,3]
 target = 5
 print(solution.twosum(nums,target))
-# zzz
